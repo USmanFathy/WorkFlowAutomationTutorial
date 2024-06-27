@@ -14,7 +14,12 @@ class Ticket extends Model
         'date'
     ];
 
-
+    public static function columnDate():string{
+        return 'date';
+    }
+    public static function userForeignKey():string{
+        return 'user_id';
+    }
     public function user():BelongsTo
     {
         return $this->belongsTo(User::class);
